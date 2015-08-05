@@ -1,0 +1,309 @@
+/**
+ * 闭合浮动
+ */
+.fn-clear:before,
+.fn-clear:after {
+    content: "";
+    display: table;
+}
+
+.fn-clear:after {
+    clear: both;
+}
+
+.fn-clear {
+    *zoom: 1; /* IE6-7 触发 hasLayout */
+}
+
+/**
+ * 设置左右浮动
+ */
+.fn-left,.fn-right {
+    display:inline;
+}
+.fn-left {
+    float:left;
+}
+.fn-right {
+    float:right;
+}
+
+
+/**
+ * 元素隐藏
+ */
+.fn-hide {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/**
+ * 显示属性
+ */
+.fn-block {
+  display: block !important;
+}
+.fn-inline {
+  display: inline !important;
+}
+.fn-inline-block {
+  display: inline-block !important;
+}
+
+
+/**
+ * 文本隐藏
+ */
+.fn-text-hide {
+    text-indent: 100%; /* 1 */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/**
+ * 文本对齐方式，左中右两端
+ */
+.fn-text-left {
+    text-align: left !important;
+}
+.fn-text-center {
+    text-align: center !important;
+}
+.fn-text-right {
+    text-align: right !important;
+}
+.fn-text-justify {
+    text-align: justify !important;
+}
+
+/**
+ * 文本强制不换行
+ */
+.fn-text-nowrap {
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+/**
+ * 文本强制换行
+ */
+.fn-text-break {
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/**
+ * 文字溢出显示省略号
+ * 1. Opera 9-10.6
+ * 2. Chrome 21+ bug https://bugs.webkit.org/show_bug.cgi?id=121902
+ */
+.fn-text-ellipsis {
+    display: block;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    -o-text-overflow: ellipsis; /* 1 */
+    text-overflow: ellipsis;
+    text-align: left; /* 2 */
+}
+
+/**
+ * 统一用双线显示人民币符号「&yen;(￥)」
+ */
+.fn-text-rmb,
+.fn-text-yuan {
+    font-family: arial;
+    font-style: normal;
+}
+
+/**
+ * 水平滚动条
+ */
+.fn-scrollable-horizontal {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+}
+
+/**
+ * 垂直滚动条
+ */
+.fn-scrollable-vertical {
+  height: 240px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  resize: vertical;
+}
+
+
+/**
+ * 三角符号
+ */
+.fn-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+/**
+ * 关闭符号
+ */
+.fn-close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+.fn-close:hover,
+.fn-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+button.fn-close {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+/*
+ * http://frozenui.github.io/base.html#layout
+ * http://thx.github.io/cube/doc/layout
+ */
+/*
+ * 自适应两端对齐布局
+ */
+.fn-layout-justify {
+    font-size: 0;
+    line-height: inherit;
+    text-align: justify;
+    text-justify: inter-ideograph; /* IE 6-7 */
+    *zoom: 1; /* IE 6-7 触发 hasLayout 使一行也能两端对齐 */
+    -moz-text-align-last: justify;
+    -webkit-text-align-last: justify;
+    text-align-last: justify;/* IE 8+ */
+}
+/**
+ * 不支持 text-align-last 的浏览器用伪元素模拟
+ * 1. margin-left:100% 仅 WebKit 支持
+ */
+.fn-layout-justify:after {
+    content: "";
+    display: inline-block;
+    width: 100%; /* 1 */
+}
+
+/* 子元素取消两端对齐 */
+.fn-layout-justify .dib {
+    display: inline-block;
+    -moz-text-align-last: auto;
+    -webkit-text-align-last: auto;
+    text-align-last: auto;
+    text-justify: auto;
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    *display: inline;
+    *zoom: 1;
+}
+
+/*
+ * 未知高度垂直居中布局
+ */
+.fn-layout-center{
+    font-size: 0;
+    *word-spacing: -1px; /* IE6、7 */
+    height: 100%; /* 继承父级高度 */
+}
+
+/* 修复 Safari 5- inline-block 的空隙 */
+ @media (-webkit-min-device-pixel-ratio:0) {
+.fn-layout-center{
+    letter-spacing: -5px;
+    }
+}
+
+/* 使用空标签生成一个高度100%的参照元素 */
+.fn-layout-center .fn-center-hack {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    font-size: 0;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.fn-layout-center .fn-center-body {
+    letter-spacing: normal;
+    word-spacing: normal;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    font-size: 12px;
+    vertical-align: middle; /* 保证文字垂直居中 */
+    padding: 0 !important; /* 防止设置边距导致居中失效 */
+    margin: 0 !important;
+    width: 100%; /* 保证连续字符也能居中 */
+    white-space: normal; /* 保证连续字符换行 */
+    word-wrap: break-word;
+}
+
+.fn-layout-center .fn-center-img {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 100%;
+    text-align: center; /* 图片默认水平居中 */
+    vertical-align: middle;
+    padding: 0 !important; /* 防止设置边距导致居中失效 */
+    margin: 0 !important;
+    font-size:0;
+}
+
+.fn-layout-center img {
+    vertical-align: middle; /* 去除现代浏览器 img 底部空隙 */
+}
+
+/**
+ * 垂直上下居中
+ */
+.fn-layout-vcenter{
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  text-align: center;
+  height: 150px; 
+}
+
+/**
+ * 列表平铺
+ */
+.fn-layout-tiled li {
+  -webkit-box-flex: 1;
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-box-align: center; 
+}

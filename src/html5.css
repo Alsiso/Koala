@@ -1,0 +1,81 @@
+
+/**
+ * 修复IE 8/9，HTML5新元素不能正确显示的问题，定义为 block的元素
+ * 修复IE 10/11，'details' or 'summary' 定义为 block 的元素
+ * 修复IE 11，'main'定义为 block 的元素
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. 修复IE 8/9，HTML5新元素不能正确显示的问题，定义为inline-block元素
+ * 2. 修复Chrome, Firefox, 和Opera的'progress'元素没有以baseline垂直对齐
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+
+/*
+ * 1. 防止没设置controls的audio显示出来
+ * 2. 去除ios5中额外的高度
+ */
+audio:not([controls]) {
+    display:none;  /*1*/
+    height:0;  /*2*/
+}
+
+
+/**
+ * 修复 IE 7/8/9，Firefox 3 和 Safari 4 中 「hidden」属性不起作用的问题
+ * 在IE、Safari、Firefox 22- 中隐藏「template」元素
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+
+/*
+ * 纠正IE9中overflow不正确
+ */
+svg:not(:root) {
+    overflow:hidden;
+}
+
+
+/*
+ * 纠正IE6/7/8样式不正确
+ */
+mark {
+    background:#ff0;
+    color:#000;
+}
+
+/**
+ * 为可拖动元素添加拖动的光标
+ * http://jsbin.com/apavod/1/edit
+ */
+[draggable] {
+    cursor: move;
+}

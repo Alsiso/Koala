@@ -1,0 +1,140 @@
+/*
+ * 定义各浏览器显示一致的样式
+ */
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+
+/**
+ * 1. 修正 IE 6-9 中颜色不能继承的问题
+ * 2. 修正 Firefox3 中文字不换行的问题
+ * 3. 修正 IE6-7 中怪异的对齐方式
+ */
+legend {
+    border: 0 none; /* 1 */
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+
+/**
+ * 1. 修正所有浏览器中字体不继承的问题
+ * 2. 修正所有浏览器中字号不继承的问题
+ * 3. 修正 Firefox 3+， Safari5 和 Chrome 中外边距不同的问题
+ * 4. 改善在所有浏览器下的垂直对齐方式
+ */
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+    vertical-align: baseline; /* 4 */
+    *vertical-align: middle; /* 4 */
+}
+
+
+/**
+ * 统一 IE 8/9/10/11 `overflow`属性为visible
+ */
+input,
+button {
+    *overflow: visible;
+}
+
+/**
+ * 重置按钮禁用时光标样式
+ */
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. 修正 IE 8/9 box-sizing 被设置为「content-box」的问题
+ * 2. 移除 IE 8/9 中多余的内边距
+ * 3. 移除 IE7 中多余的内边距(IE6 中任然存在)
+ */
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. 修正 Safari 5 和 Chrome 中「appearance」被设置为「searchfield」的问题
+ * 2. 修正 Safari 5 和 Chrome 中「box-sizing」被设置为 「border-box」的问题
+ */    
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/*
+ * 去除FF3+内补丁和内边框
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border:0;
+    padding:0;
+}
+
+/**
+ * 修正 Chrome 中 input [type="number"] 在特定高度和 font-size 时,
+ * 下面一个箭头光标变成「cursor: text」
+ * @demo: http://jsfiddle.net/FFXEc/
+ * 动画演示：http://gtms04.alicdn.com/tps/i4/T18kd8FCtaXXc_FhcF-330-350.gif
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+
+/*
+ * 1. 让FF,S5,Chrome下的textarea只能纵向拉伸高度, 避免因拉伸而影响布局
+ * 2. 去掉IE下默认的滚动条占位
+ * 3. 默认textarea与文本baseline对齐，导致文本沉在下面比较难看，这里统一与文本顶对齐
+ */
+textarea {
+    resize:vertical; /*1*/
+    overflow:auto; /*2*/
+    vertical-align:top; /*3*/
+}
+
+
+/**
+ * 修正 Chrome 30- option 中文字无法显示的问题
+ * http://jsbin.com/avujas/1/edit 
+ */
+select:disabled option:checked,
+option:disabled:checked {
+    color: #D2D2D2;
+}
+
+
+/**
+ * label 元素给予手型，暗示此处可点击
+ */
+label {
+    cursor: pointer;
+}
+
+/**
+ * 统一 select 样式, Firefox 中有 padding:1px 0
+ * http://jsbin.com/avujas/1/edit
+ */
+select[size],
+select[multiple],
+select[size][multiple] {
+    border: 1px solid #AAA;
+    padding:0;
+}
