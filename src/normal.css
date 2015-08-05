@@ -1,0 +1,136 @@
+/*
+ * 1. 10px = 1em = 100% = 8pt
+ * 2. 防止 iOS 横屏字号放大，同时保证在PC上 zoom 功能正常
+ */
+html {
+  font-size: 62.5%; /* 1 */
+  -ms-text-size-adjust: 100%; /*2*/
+  -webkit-text-size-adjust: 100%; /*2*/
+  text-size-adjust: 100%;/*2*/
+  
+}
+
+/*
+ * 1. dt 默认没边距
+ * 2. li 默认没边距
+ * 3. code 默认没边距
+ * 4. th,td 默认padding:1px
+ */
+body, dl, dd, /* 1 */
+ul, ol, /*2*/
+h1, h2, h3, h4, h5, h6, pre, /*3*/
+form, fieldset, legend, input, textarea, optgroup,
+p, blockquote, figure, hr, menu, dir,
+thead, tbody, tfoot, th, td /*4*/
+{
+    margin:0;
+    padding:0;
+}
+
+
+/*
+ * 1. 定义全局字体
+ * 2. 修复表单元素不能继承字体样式
+ */
+body,   /*1*/
+input,select,button,textarea /*2*/
+{
+    font:12px/1.5 tahoma,arial,\5b8b\4f53;
+}
+
+input,select,textarea{
+  font-size:100%;
+}
+
+
+/*
+ * 1.基本的链接样式
+ * 2.去掉 IE 10+ 点击链接时的灰色背景
+ */
+a {
+    text-decoration: none;/*1*/
+}
+a:hover {
+    text-decoration: underline;/*1*/
+}
+a:active {
+    background-color: transparent; /*2*/
+}
+
+/**
+ * 去掉列表前的标识, li会继承
+ */
+ul, ol {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+/*
+ * 移除默认边框
+ */
+img,iframe{
+    border:0;
+}
+
+/*
+ * 去除链接默认的下划线
+ */
+a {
+    text-decoration:none;
+}
+
+/*
+ * 移除单元格间距让其边重合 
+ */
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/*
+ * 修复th不继承text-align，默认左对齐
+ */
+caption,th {
+  text-align:left;
+}
+
+
+/*
+ * 斜体扶正
+ */
+address,cite,dfn,em,var{
+    font-style:normal;
+}
+
+/*
+ * 重置标题，采用自定义
+ */
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:500;
+}
+
+
+/*
+ * 统一引用标记
+ */
+q:before,q:after{
+    content:'';
+}
+
+
+/*
+ * 统一上标和下标 
+ */
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}

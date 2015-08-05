@@ -1,0 +1,229 @@
+/**
+ * 固定宽度，根据媒体查询设置不同宽度
+ */
+.ui-grid-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .ui-grid-container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .ui-grid-container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .ui-grid-container {
+    width: 1170px;
+  }
+}
+
+/**
+ * 百分百宽度，两边留白各15像素
+ */
+.ui-grid-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/**
+ * 通过行来包裹列，清除外边距，与父元素重叠
+ */
+.ui-row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.ui-col-xs-1, .ui-col-sm-1, .ui-col-1, .ui-col-lg-1, .ui-col-xs-2, .ui-col-sm-2, .ui-col-2, .ui-col-lg-2, .ui-col-xs-3, .ui-col-sm-3, .ui-col-3, .ui-col-lg-3, .ui-col-xs-4, .ui-col-sm-4, .ui-col-4, .ui-col-lg-4, .ui-col-xs-5, .ui-col-sm-5, .ui-col-5, .ui-col-lg-5, .ui-col-xs-6, .ui-col-sm-6, .ui-col-6, .ui-col-lg-6, .ui-col-xs-7, .ui-col-sm-7, .ui-col-7, .ui-col-lg-7, .ui-col-xs-8, .ui-col-sm-8, .ui-col-8, .ui-col-lg-8, .ui-col-xs-9, .ui-col-sm-9, .ui-col-9, .ui-col-lg-9, .ui-col-xs-10, .ui-col-sm-10, .ui-col-10, .ui-col-lg-10, .ui-col-xs-11, .ui-col-sm-11, .ui-col-11, .ui-col-lg-11, .ui-col-xs-12, .ui-col-sm-12, .ui-col-12, .ui-col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+/**
+ * 超小屏幕 手机 (<768px)
+ */
+.ui-col-xs-1, .ui-col-xs-2, .ui-col-xs-3, .ui-col-xs-4, .ui-col-xs-5, .ui-col-xs-6, .ui-col-xs-7, .ui-col-xs-8, .ui-col-xs-9, .ui-col-xs-10, .ui-col-xs-11, .ui-col-xs-12 {
+  float: left;
+}
+.ui-col-xs-12 {
+  width: 100%;
+}
+.ui-col-xs-11 {
+  width: 91.66666667%;
+}
+.ui-col-xs-10 {
+  width: 83.33333333%;
+}
+.ui-col-xs-9 {
+  width: 75%;
+}
+.ui-col-xs-8 {
+  width: 66.66666667%;
+}
+.ui-col-xs-7 {
+  width: 58.33333333%;
+}
+.ui-col-xs-6 {
+  width: 50%;
+}
+.ui-col-xs-5 {
+  width: 41.66666667%;
+}
+.ui-col-xs-4 {
+  width: 33.33333333%;
+}
+.ui-col-xs-3 {
+  width: 25%;
+}
+.ui-col-xs-2 {
+  width: 16.66666667%;
+}
+.ui-col-xs-1 {
+  width: 8.33333333%;
+}
+
+/**
+ * 小屏幕 平板 (≥768px)
+ */
+@media (min-width: 768px) {
+  .ui-col-sm-1, .ui-col-sm-2, .ui-col-sm-3, .ui-col-sm-4, .ui-col-sm-5, .ui-col-sm-6, .ui-col-sm-7, .ui-col-sm-8, .ui-col-sm-9, .ui-col-sm-10, .ui-col-sm-11, .ui-col-sm-12 {
+    float: left;
+  }
+  .ui-col-sm-12 {
+    width: 100%;
+  }
+  .ui-col-sm-11 {
+    width: 91.66666667%;
+  }
+  .ui-col-sm-10 {
+    width: 83.33333333%;
+  }
+  .ui-col-sm-9 {
+    width: 75%;
+  }
+  .ui-col-sm-8 {
+    width: 66.66666667%;
+  }
+  .ui-col-sm-7 {
+    width: 58.33333333%;
+  }
+  .ui-col-sm-6 {
+    width: 50%;
+  }
+  .ui-col-sm-5 {
+    width: 41.66666667%;
+  }
+  .ui-col-sm-4 {
+    width: 33.33333333%;
+  }
+  .ui-col-sm-3 {
+    width: 25%;
+  }
+  .ui-col-sm-2 {
+    width: 16.66666667%;
+  }
+  .ui-col-sm-1 {
+    width: 8.33333333%;
+  }
+}
+
+/**
+ * 中等屏幕 桌面显示器 (≥992px)
+ */
+@media (min-width: 992px) {
+  .ui-col-1, .ui-col-2, .ui-col-3, .ui-col-4, .ui-col-5, .ui-col-6, .ui-col-7, .ui-col-8, .ui-col-9, .ui-col-10, .ui-col-11, .ui-col-12 {
+    float: left;
+  }
+  .ui-col-12 {
+    width: 100%;
+  }
+  .ui-col-11 {
+    width: 91.66666667%;
+  }
+  .ui-col-10 {
+    width: 83.33333333%;
+  }
+  .ui-col-9 {
+    width: 75%;
+  }
+  .ui-col-8 {
+    width: 66.66666667%;
+  }
+  .ui-col-7 {
+    width: 58.33333333%;
+  }
+  .ui-col-6 {
+    width: 50%;
+  }
+  .ui-col-5 {
+    width: 41.66666667%;
+  }
+  .ui-col-4 {
+    width: 33.33333333%;
+  }
+  .ui-col-3 {
+    width: 25%;
+  }
+  .ui-col-2 {
+    width: 16.66666667%;
+  }
+  .ui-col-1 {
+    width: 8.33333333%;
+  }
+  
+}
+
+/**
+ * 大屏幕 大桌面显示器 (≥1200px)
+ */
+@media (min-width: 1200px) {
+  .ui-col-lg-1, .ui-col-lg-2, .ui-col-lg-3, .ui-col-lg-4, .ui-col-lg-5, .ui-col-lg-6, .ui-col-lg-7, .ui-col-lg-8, .ui-col-lg-9, .ui-col-lg-10, .ui-col-lg-11, .ui-col-lg-12 {
+    float: left;
+  }
+  .ui-col-lg-12 {
+    width: 100%;
+  }
+  .ui-col-lg-11 {
+    width: 91.66666667%;
+  }
+  .ui-col-lg-10 {
+    width: 83.33333333%;
+  }
+  .ui-col-lg-9 {
+    width: 75%;
+  }
+  .ui-col-lg-8 {
+    width: 66.66666667%;
+  }
+  .ui-col-lg-7 {
+    width: 58.33333333%;
+  }
+  .ui-col-lg-6 {
+    width: 50%;
+  }
+  .ui-col-lg-5 {
+    width: 41.66666667%;
+  }
+  .ui-col-lg-4 {
+    width: 33.33333333%;
+  }
+  .ui-col-lg-3 {
+    width: 25%;
+  }
+  .ui-col-lg-2 {
+    width: 16.66666667%;
+  }
+  .ui-col-lg-1 {
+    width: 8.33333333%;
+  }
+  
+}
