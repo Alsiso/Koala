@@ -6,6 +6,10 @@
     animation-fill-mode: both;
 }
 
+
+/**
+ * 弹跳
+ */
 @-webkit-keyframes bounce {
   0%, 20%, 53%, 80%, 100% {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -62,6 +66,7 @@
   }
 }
 
+
 .bounce {
   -webkit-animation-name: bounce;
   animation-name: bounce;
@@ -69,6 +74,11 @@
   transform-origin: center bottom;
 }
 
+
+
+/**
+ * 闪烁
+ */
 @-webkit-keyframes flash {
   0%, 50%, 100% {
     opacity: 1;
@@ -94,8 +104,9 @@
   animation-name: flash;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
+/**
+ * 跳动
+ */
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale3d(1, 1, 1);
@@ -136,7 +147,9 @@
 }
 
 
-
+/**
+ * 摇动
+ */
 @-webkit-keyframes shake {
   0%, 100% {
     -webkit-transform: translate3d(0, 0, 0);
@@ -177,7 +190,9 @@
 }
 
 
-
+/**
+ * 淡入 
+ */
 @-webkit-keyframes fadeIn {
     0% {
         opacity: 0;
@@ -322,6 +337,11 @@
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
 }
+
+
+/**
+ * 淡出 
+ */
 @-webkit-keyframes fadeOut {
     0% {
         opacity: 1;
@@ -440,7 +460,9 @@
 }
 
 
-
+/**
+ * 滑入
+ */
 @-webkit-keyframes slideInDown {
   0% {
     -webkit-transform: translate3d(0, -100%, 0);
@@ -578,6 +600,10 @@
   }
 }
 
+
+/**
+ * 滑出
+ */
 @keyframes slideOutDown {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
